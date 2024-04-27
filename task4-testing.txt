@@ -1,0 +1,57 @@
+Logs when the:
+1) internet connection is functional + the mirrors are missing and need to be created
+
+Apr 27 05:17:46 DESKTOP-E627962 up.sh: Script started.
+Apr 27 05:18:00 DESKTOP-E627962 up.sh: Network connectivity is functional.
+Apr 27 05:18:00 DESKTOP-E627962 systemd[1]: Starting Update APT News...
+Apr 27 05:18:00 DESKTOP-E627962 systemd[1]: Starting Update the local ESM caches...
+Apr 27 05:18:01 DESKTOP-E627962 systemd[1]: esm-cache.service: Deactivated successfully.
+Apr 27 05:18:01 DESKTOP-E627962 systemd[1]: Finished Update the local ESM caches.
+Apr 27 05:18:03 DESKTOP-E627962 up.sh: Updated the Linux system.
+Apr 27 05:18:03 DESKTOP-E627962 up.sh: Missing linux kernel local mirror.
+Apr 27 05:18:06 DESKTOP-E627962 systemd[1]: apt-news.service: Deactivated successfully.
+Apr 27 05:18:06 DESKTOP-E627962 systemd[1]: Finished Update APT News.
+Apr 27 06:17:05 DESKTOP-E627962 CRON[207432]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Apr 27 06:22:27 DESKTOP-E627962 systemd[1]: Starting Daily apt upgrade and clean activities...
+Apr 27 06:22:58 DESKTOP-E627962 systemd[1]: apt-daily-upgrade.service: Deactivated successfully.
+Apr 27 06:22:58 DESKTOP-E627962 systemd[1]: Finished Daily apt upgrade and clean activities.
+Apr 27 06:25:02 DESKTOP-E627962 CRON[207502]: (root) CMD (test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily ))
+Apr 27 07:02:32 DESKTOP-E627962 up.sh: Linux kernel local mirror created.
+Apr 27 07:02:33 DESKTOP-E627962 up.sh: Missing glibc local mirror.
+Apr 27 07:04:32 DESKTOP-E627962 up.sh: glibc local mirror created.
+Apr 27 07:04:45 DESKTOP-E627962 up.sh: Updated the local mirror of the linux kernel.
+Apr 27 07:04:46 DESKTOP-E627962 up.sh: Updated the local mirror of glibc.
+Apr 27 07:04:47 DESKTOP-E627962 up.sh: Script ended.
+
+
+2) internet connection is functional + the mirrors are already created
+
+Apr 27 15:58:38 DESKTOP-E627962 up.sh: Script started.
+Apr 27 15:58:53 DESKTOP-E627962 up.sh: Network connectivity is functional.
+Apr 27 15:58:57 DESKTOP-E627962 systemd[1]: Starting Update APT News...
+Apr 27 15:58:57 DESKTOP-E627962 systemd[1]: Starting Update the local ESM caches...
+Apr 27 15:58:58 DESKTOP-E627962 systemd[1]: esm-cache.service: Deactivated successfully.
+Apr 27 15:58:58 DESKTOP-E627962 systemd[1]: Finished Update the local ESM caches.
+Apr 27 15:59:01 DESKTOP-E627962 up.sh: Updated the Linux system.
+Apr 27 15:59:02 DESKTOP-E627962 systemd[1]: apt-news.service: Deactivated successfully.
+Apr 27 15:59:02 DESKTOP-E627962 systemd[1]: Finished Update APT News.
+Apr 27 15:59:44 DESKTOP-E627962 up.sh: Updated the local mirror of the linux kernel.
+Apr 27 15:59:46 DESKTOP-E627962 up.sh: Updated the local mirror of glibc.
+Apr 27 15:59:46 DESKTOP-E627962 up.sh: Script ended.
+
+
+3) internet connection has issues 
+
+Apr 27 16:23:56 DESKTOP-E627962 up.sh: Script started.
+Apr 27 16:24:08 DESKTOP-E627962 python3[208522]: Failed to fetch ESM Apt Cache item: https://esm.ubuntu.com/apps/ubuntu/dists/jammy-apps-updates/InRelease
+Apr 27 16:24:08 DESKTOP-E627962 systemd[1]: esm-cache.service: Deactivated successfully.
+Apr 27 16:24:08 DESKTOP-E627962 systemd[1]: Finished Update the local ESM caches.
+Apr 27 16:24:20 DESKTOP-E627962 up.sh: Network connectivity has issues. Canceling the update.
+Apr 27 16:24:20 DESKTOP-E627962 up.sh: Script stopped.
+
+
+4) an instance of the script is already running
+
+Apr 27 16:56:04 DESKTOP-E627962 up.sh: Script started.
+Apr 27 16:56:04 DESKTOP-E627962 up.sh: An instance of this script is already running.
+Apr 27 16:56:04 DESKTOP-E627962 up.sh: Script exited.
